@@ -35,13 +35,13 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
   
   Conditions that prompt execution
   
-  1. 
+  1. Stable blood sugar level
   
-  2.
+  2.Blood sugar level decreasing
   
-  3. 
+  3. Blood sugar level increasing and the increasing rate is stable or increasing
   
-  4. 
+  4. Blood sugar level increasing and the increasing rate is decreasing
   
   5.
  
