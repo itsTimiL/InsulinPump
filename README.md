@@ -34,10 +34,15 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
   - Note: There are limits to everything. So, there will be limits on doses per day. And, there will be limits the amount of the dose in one injection. This means that the amount of insulin delievred may be slightly different than the calculated dose provided.
   
   Conditions that prompt execution
+  
   1. 
+  
   2.
+  
   3. 
+  
   4. 
+  
   5.
  
  
