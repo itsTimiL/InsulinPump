@@ -14,11 +14,11 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
  # Insulin pump hardware architecture
  ![image](https://user-images.githubusercontent.com/124085275/215911205-bc0f688b-8913-4fc8-bfb0-39a962143486.png)
  
- [name of part] will have control over the system as a whole. This part contains the run state and an error state. However, there will be a state that will only execute when possible hardware issues occur.
+ [controller] will have control over the system as a whole. This part contains the run state and an error state. However, there will be a state that will only execute when possible hardware issues occur.
  
  [Displays] There will be a total of four displays. One of the displays will express the hardware issues that may occur. There will be one display that expresses the last blood sugar measurement and another display will express the computation of last dose of insulin. Lastly, there will a display that showcases the current time.
  
- [clock] The clock will allow [name of part] to have the current time.
+ [clock] The clock will allow [controller] to have the current time.
  
  Due to not having real information, the pump, the production of the needle, the sensor, and alarm will be simulations. And, due to these things being simulations, hardware isssue occurances will be a simulation as well. With that being said, these things will be made up.
  
@@ -26,12 +26,19 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
  
  1. The insulin dose delivered will be calculated by taking measurments of the current state of the blood sugar and comparing it to a level that has already been measured. This will prompt the computation of the dose that is required.
  2. The system will measure the level of blood sugar and then dieliver insulin in [time period]
- 3. The total amount of insulin delivered will be calculated by [name of part], which will be because of the current blood sugar analysis measured by the sensor.
+ 3. The total amount of insulin delivered will be calculated by [controller], which will be because of the current blood sugar analysis measured by the sensor.
  
   - No insulin should be delivered if the analysis is below a safe mininmum.
   - During the time that the anaylsis is in a safe proximity, the insulin will only be delievered if the blood sugar level is increasing and the rate of of the increasing blood sugar is increasing as well.
   - If the analysis goes above the recommended level, the insulin will be delivered. However, if the blood sugar level is decreasing and the rate of the decreasing blood sugar level is increasing, then the insulin will not be delivered.
   - Note: There are limits to everything. So, there will be limits on doses per day. And, there will be limits the amount of the dose in one injection. This means that the amount of insulin delievred may be slightly different than the calculated dose provided.
+  
+  Conditions that prompt execution
+  1. 
+  2.
+  3. 
+  4. 
+  5.
  
  
 
