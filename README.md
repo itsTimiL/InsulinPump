@@ -43,17 +43,22 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
   
   Conditions that prompt execution
   
-  Note: 
+  Note: Table for the state of sugar level and activity
   
-  1. Stable blood sugar level [meaure* = measure*]
   
-  2. Blood sugar level decreasing [ measure* < measure*]
   
-  3. Blood sugar level increasing and the increasing rate is stable or increasing [ meaure* - measure*] >- measure* - measure*]
+  # The Situations
   
-  4. Blood sugar level increasing and the increasing rate is decreasing [measure* - measure*] < [measure* - measure*]
+  Siutation #1 [ Blood sugar level decreasing]
   
-  5.
+  
+
+
+
+
+  
+
+  
  
  
 
