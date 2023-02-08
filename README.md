@@ -11,16 +11,24 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
  - The system shall perform reliably and deliver the correct amount of insulin to counteract the current level of blood sugar.
  - The system must therefore be designed and implemented to ensure that the system always meets these requirements.
  
+ # Essential high-level requirements
+ - The system shall be available to deliver insulin when required.
+ - The system shall perform reliably and deliver the correct amount of insulin to counteract the current level of blood sugar.
+ - The system must therefore be designed and implemented to ensure that the system always meets these requirements.
+ 
  # Insulin pump hardware architecture
  ![image](https://user-images.githubusercontent.com/124085275/215911205-bc0f688b-8913-4fc8-bfb0-39a962143486.png)
  
- [controller] will have control over the system as a whole. This part contains the run state and an error state. However, there will be a state that will only execute when possible hardware issues occur.
+  [controller] will have control over the system as a whole. This part contains the run state and an error state. However, there will be a state that will only execute when possible hardware issues occur.
  
  [Displays] There will be a total of four displays. One of the displays will express the hardware issues that may occur. There will be one display that expresses the last blood sugar measurement and another display will express the computation of last dose of insulin. Lastly, there will a display that showcases the current time.
  
  [clock] The clock will allow [controller] to have the current time.
  
  Due to not having real information, the pump, the production of the needle, the sensor, and alarm will be simulations. And, due to these things being simulations, hardware isssue occurances will be a simulation as well. With that being said, these things will be made up.
+ 
+ # Activity model of the insulin pump
+ ![image](https://user-images.githubusercontent.com/124085275/217400185-274591ca-3bcc-4d04-8150-dde1a960b1f0.png)
  
  # The Preconditions
  
