@@ -35,6 +35,10 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
  1. The insulin dose delivered will be calculated by taking measurments of the current state of the blood sugar and comparing it to a level that has already been measured. This will prompt the computation of the dose that is required.
  2. The system will measure the level of blood sugar and then dieliver insulin in [time period]
  3. The total amount of insulin delivered will be calculated by [controller], which will be because of the current blood sugar analysis measured by the sensor.
+ 4. Furthermore, every minute, the controller will execute a self-test. And, the outcome of the self-test will be implemented to calculate the new blood sugar level state. [If the test is "true" with an error being possiblem the new state will be an "error." If the test is "false" with no errors, the blood sugar level state will continue to run. And, if the new blood sugar level state is an "error," the system will be stopped.]
+ 5. The sensor will measure the currnet blood sugar. The measurements will be in micrograms/millitre. It will be between 1-3 micograms/millitre, which is considered normal. And, it will be refresched every 10 minutes.
+ 6. At the start of every 24 hour time frame, the total amount of insulin given will reset to 0.
+ 7. Lastly, under normal circumstances, the system will be running.
  
   - No insulin should be delivered if the analysis is below a safe mininmum.
   - During the time that the anaylsis is in a safe proximity, the insulin will only be delievered if the blood sugar level is increasing and the rate of of the increasing blood sugar is increasing as well.
@@ -53,11 +57,7 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
   |Blood sugar level increasing and the increasing rate is decreasing ((m2 - m1) < (m1 - m0)) |          fullDosage = 0
   |If the result is rounded = 0 |                                                                        fullDosage = miniDosage
 
-
-  
-  
-  
-  # The Situations
+  # Functioanlity Situations
   
   Siutation #1 [ Blood sugar level decreasing]
   
