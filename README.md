@@ -43,7 +43,17 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
   
   Conditions that prompt execution
   
-  Note: Table for the state of sugar level and activity
+  Note: As we look at the table below, the table is showing the 3 measuremnts of the blood sugar level. One being the oldert, m0. Another being a middle measurement, m1. And, one being the lastest, m2.
+  
+  |The State of Sugar level |                                                                         Activity    |                                                                
+  |-------------------------| ------------------------------------------------------------------------------------|   
+  | Stable blood sugar level (m2= m1)     |                                                              fullDosage =0  
+  |Blood sugar level decreasing (m2 < m1) |                                                              fullDosage = 0 
+  |Blood sugar level increasing and the increasing rate is stable or increasing ((m2-m1) >= (m1 -m0)) |  fullDosage = ["rounded"] (( m2 - m1)/4)
+  |Blood sugar level increasing and the increasing rate is decreasing ((m2 - m1) < (m1 - m0)) |          fullDosage = 0
+  |If the result is rounded = 0 |                                                                        fullDosage = miniDosage
+
+
   
   
   
