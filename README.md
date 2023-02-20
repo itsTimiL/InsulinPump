@@ -3,9 +3,9 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
 
 # User Stories
 
- 1. As a diabetic, I want the system within the insulin pump to be able to deliver the correct amount of insulin so that hypoglycema does not occur.
+ 1. As a diabetic, I want the system within the insulin pump to be able to deliver the correct amount of insulin so that hypoglycemia does not occur.
  2. As a diabetic, I want the system to detect when insulin is needed so that I am at a safe blood sugar level.
- 3. As a diabetic, I want malfunctions to be in consideration so that I'm not left without insulin pump.
+ 3. As a diabetic, I want malfunctions to be considerated so that I'm not left without insulin pump.
  
 
 # The Goal
