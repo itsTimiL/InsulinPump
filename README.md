@@ -1,6 +1,13 @@
 # InsulinPump
 An embedded system in an insulin pump used by diabetics to maintain blood glucose control
 
+# User Stories
+
+ 1. As a diabetic, I want the system within the insulin pump to be able to deliver the correct amount of insulin so that hypoglycema does not occur.
+ 2. As a diabetic, I want the system to detect when insulin is needed so that I am at a safe blood sugar level.
+ 3. As a diabetic, I want malfunctions to be in consideration so that I'm not left without insulin pump.
+ 
+
 # The Goal
  - Collects data from a blood sugar sensor and calculates the amount of insulin required to be injected. 
  - Calculation based on the rate of change of blood sugar levels.
