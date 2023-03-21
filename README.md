@@ -58,36 +58,36 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
   
   |The State of Sugar level |                                                                         Activity    |                                                                
   |-------------------------| ------------------------------------------------------------------------------------|   
-  | Stable blood sugar level (m2= m1)     |                                                              fullDosage =0  
-  |Blood sugar level decreasing (m2 < m1) |                                                              fullDosage = 0 
-  |Blood sugar level increasing and the increasing rate is stable or increasing ((m2-m1) >= (m1 -m0)) |  fullDosage = ["rounded"] (( m2 - m1)/4)
-  |Blood sugar level increasing and the increasing rate is decreasing ((m2 - m1) < (m1 - m0)) |          fullDosage = 0
-  |If the result is rounded = 0 |                                                                        fullDosage = miniDosage
+  | Stable blood sugar level (r2= r1)     |                                                              CompDose =0  
+  |Blood sugar level decreasing (r2 < r1) |                                                              CompDose = 0 
+  |Blood sugar level increasing and the increasing rate is stable or increasing (r2-r1) >= (r1 -r0)) |  CompDose = ["rounded"] (( r2 - r1)/4)
+  |Blood sugar level increasing and the increasing rate is decreasing ((r2 - r1) < (r1 - r0)) |          CompDose = 0
+  |If the result is rounded = 0 |                                                                        CompDose = MinimumDose
 
   # Functioanlity Situations
   
-  Siutation #1 [ Blood sugar level stable (m2=m1)]
+  Siutation #1 [ Blood sugar level stable (r2= r1)]
   
   - Hypothesis:
   - If everything goes well:
   - Possible erorrs:
   - If system executes properly:
   
-  Siutation #2 [ Blood sugar level decreasing (m2 < m1)]
+  Siutation #2 [ Blood sugar level decreasing (r2 < r1)]
   
   - Hypothesis:
   - If everything goes well:
   - Possible erorrs:
   - If system executes properly:
   
-   Siutation #3 [ Blood sugar level increasing and the increasing rate is stable or increasing ((m2-m1) >= (m1 -m0))]
+   Siutation #3 [ Blood sugar level increasing and the increasing rate is stable or increasing (r2-r1) >= (r1 -r0))]
   
   - Hypothesis:
   - If everything goes well:
   - Possible erorrs:
   - If system executes properly:
   
-   Siutation #4 [ Blood sugar level increasing and the increasing rate is decreasing ((m2 - m1) < (m1 - m0))]
+   Siutation #4 [ Blood sugar level increasing and the increasing rate is decreasing ((r2 - r1) < (r1 - r0))]
   
   - Hypothesis:
   - If everything goes well:
