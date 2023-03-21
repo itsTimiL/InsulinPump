@@ -65,7 +65,7 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
   | Stable blood sugar level (r2= r1)     |                                                              CompDose =0  
   |Blood sugar level decreasing (r2 < r1) |                                                              CompDose = 0 
   |Blood sugar level increasing and the increasing rate is stable or increasing (r2-r1) >= (r1 -r0)) |  CompDose = ["rounded"] (( r2 - r1)/4)
-  |Blood sugar level increasing and the increasing rate is decreasing ((r2 - r1) < (r1 - r0)) |          CompDose = 0
+  |Blood sugar level increasing and the increasing rate is decreasing (r2 - r1) < (r1 - r0)) |          CompDose = 0
   |If the result is rounded = 0 |                                                                        CompDose = MinimumDose
 
   # Functioanlity Situations
@@ -91,7 +91,7 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
   - Possible erorrs:
   - If system executes properly:
   
-   Situation #4 [ Blood sugar level increasing and the increasing rate is decreasing ((r2 - r1) < (r1 - r0))]
+   Situation #4 [ Blood sugar level increasing and the increasing rate is decreasing (r2 - r1) < (r1 - r0))]
   
   - Hypothesis:
   - If everything goes well:
