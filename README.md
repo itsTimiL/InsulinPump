@@ -2,11 +2,15 @@
 An embedded system in an insulin pump used by diabetics to maintain blood glucose control
 
 # User Stories
+ 1. As a diabetic, I want the insulin pump to accurately deliver the required dose of insulin, so that my blood glucose levels are controlled.
+ 2. As a diabetic, I want the insulin pump to be compatible with different types of insulin, so that I have flexibility in my treatment options and can switch between types as needed.
+ 3. As a diabetic, I want the insulin pump to have a built-in alarm system, so that I am alerted if there is a problem with the pump or if my blood glucose levels are too high or too low.
+ 4. As a diabetic, I want the insulin pump to have a memory function, so that I can track my insulin dosage and blood glucose levels over time and adjust my treatment plan accordingly.
+ 5. As a diabetic, I want the insulin pump to have an emergency shut-off button, so that I can quickly stop insulin delivery in case of an emergency or adverse reaction. 
+ 6. As a diabetic, I want the insulin pump to be reliable and durable, so that I can depend on it to work correctly and not fail or break down unexpectedly.
+ 7. As a diabetic, I want the insulin pump to be compatible with a mobile app or computer software, so that I can easily sync my data and share it with my healthcare provider.
+ 8. As a diabetic, I want the insulin pump to be easy to use, with clear instructions and simple controls and a user-friendly interface.
 
- 1. As a diabetic, I want the system within the insulin pump to be able to deliver the correct amount of insulin so that hypoglycemia does not occur.
- 2. As a diabetic, I want the system to detect when insulin is needed so that I am at a safe blood sugar level.
- 3. As a diabetic, I want malfunctions to be considerated so that I'm not left without insulin pump.
- 
 
 # The Goal
  - Collects data from a blood sugar sensor and calculates the amount of insulin required to be injected. 
