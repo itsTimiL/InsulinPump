@@ -66,28 +66,28 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
 
   # Functioanlity Situations
   
-  Siutation #1 [ Blood sugar level stable (r2= r1)]
+  Situation #1 [ Blood sugar level stable (r2= r1)]
   
   - Hypothesis:
   - If everything goes well:
   - Possible erorrs:
   - If system executes properly:
   
-  Siutation #2 [ Blood sugar level decreasing (r2 < r1)]
+  Situation #2 [ Blood sugar level decreasing (r2 < r1)]
   
   - Hypothesis:
   - If everything goes well:
   - Possible erorrs:
   - If system executes properly:
   
-   Siutation #3 [ Blood sugar level increasing and the increasing rate is stable or increasing (r2-r1) >= (r1 -r0))]
+   Situation #3 [ Blood sugar level increasing and the increasing rate is stable or increasing (r2-r1) >= (r1 -r0))]
   
   - Hypothesis:
   - If everything goes well:
   - Possible erorrs:
   - If system executes properly:
   
-   Siutation #4 [ Blood sugar level increasing and the increasing rate is decreasing ((r2 - r1) < (r1 - r0))]
+   Situation #4 [ Blood sugar level increasing and the increasing rate is decreasing ((r2 - r1) < (r1 - r0))]
   
   - Hypothesis:
   - If everything goes well:
