@@ -98,6 +98,44 @@ An embedded system in an insulin pump used by diabetics to maintain blood glucos
   - Possible erorrs:
   - If system executes properly:
   
+   Situation #5 [ Blood sugar level increasing and the increasing rate is increasing (r2 - r1) < (r1 - r0)) & rounded = 0]
+  
+  - Hypothesis:
+  - If everything goes well:
+  - Possible erorrs:
+  - If system executes properly:
+  
+   Situation #5 [ Issues with hadware regarding self-test or before the measurement of blood sugar; collecting or injecting]
+  
+  - Hypothesis:
+  - If everything goes well:
+  - Possible erorrs:
+  - If system executes properly:
+  
+ # Diagrams
+   Activity Diagram:
+   ********
+   Class Diagram:
+   *******
+   Use Case Diagram:
+   *********
+   Sequence Diagram:
+   
+   Overall
+   
+   theController
+   
+ # Test Cases
+ 
+ [explain what each part is responible for]
+ 
+ # Unit Test
+ 
+ [ how to run the final product]
+ 
+ # Acceptance Test:
+ [ picture of final product and explan the driver class]
+  
   
   
 
