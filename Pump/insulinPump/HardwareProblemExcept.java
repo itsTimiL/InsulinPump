@@ -1,10 +1,7 @@
 package insulinPump;
 
-	
-	public class HardwareProblemExcept extends Exception {
-	    public HardwareProblemExcept (String mssge) {
-	        super(mssge);
-	    }
+public class HardwareProblemExcept extends Exception {
+	public HardwareProblemExcept(String messge) {
+		super(messge);
 	}
-
-
+}
