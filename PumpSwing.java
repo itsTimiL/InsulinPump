@@ -1,9 +1,11 @@
 package insulinpump;
+
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.Color;
 import java.lang.Math;
 import java.awt.FlowLayout;
+import java.io.*;
 /**
  *
  * 
@@ -30,8 +32,8 @@ public class PumpSwing extends JFrame implements ActionListener {
     JTextField newUserSFT = new JTextField(7);
     JButton newUserE = new JButton("Enter");
     JButton newUserB = new JButton("Back");
-    JTextArea newUserTip = new JTextArea("Tip:\n" + "The insulin-to-carb ratio is 1 unit of insulin for each amount of carbohydrate.\n" 
-                                            + "Your insulin sensitivity factor is the mg/dl drop in blood glucose due to 1 unit of insulin. \n Bolus: Calcuates amount of insulin that needs to be injected.");
+    JTextArea newUserTip = new JTextArea("Tip:\n" + "The insulin-to-carb ratio of the type of insulin you're using is \nhow many grams of carbohydrate each unit of that insulin can account for \n(e.g. 10 for a 1:10 ratio).\n" 
+                                            + "Your insulin sensitivity factor is the mg/dl drop in blood glucose \ndue to 1 unit of insulin (e.g. 50). \n Bolus: Calcuates amount of insulin that needs to be injected.");
     
     // Returning User
     JPanel returningUser = new JPanel();
@@ -48,15 +50,16 @@ public class PumpSwing extends JFrame implements ActionListener {
     JButton mainMenuSett = new JButton("Settings");
     JButton mainMenuB = new JButton("Back");
     JButton mainMenuE = new JButton("Exit");
-    
+    JTextArea mainMenuTip = new JTextArea("\nBolus: Calcuates amount of insulin that needs to be injected.");
+
     //Bolus Panel
     JPanel bolus = new JPanel();
-    JLabel bolusL = new JLabel("BG:");
+    JLabel bolusL = new JLabel("Current Blood Glucose (mg/dL):");
     JTextField bolusText = new JTextField(10);
-    JLabel bolusCarbs = new JLabel("Carbs:");
+    JLabel bolusCarbs = new JLabel("Carbs to account for with this dose:");
     JTextField bolusCarbsT = new JTextField(10);
     JButton bolusN = new JButton("Next");
-    JLabel bolusTot = new JLabel("Bolus Suggestion:");
+    JLabel bolusTot = new JLabel("\nBolus Suggestion:");
     JLabel bolusWarn = new JLabel (" ");
     JButton bolusConfirm = new JButton ("Confirm");
     JButton bolusCancel = new JButton ("Cancel");
@@ -154,6 +157,7 @@ public class PumpSwing extends JFrame implements ActionListener {
     mainMenuB.addActionListener(this);
     mainMenu.add(mainMenuE);
     mainMenuE.addActionListener(this);
+    mainMenu.add(mainMenuTip);
    
     //Bolus Panel
     this.getContentPane().add(bolus);
@@ -162,7 +166,7 @@ public class PumpSwing extends JFrame implements ActionListener {
     
     bolus.add(bolusL);
     bolus.add(bolusText);
-    bolus.add(bolusL);
+    bolus.add(bolusCarbs);
     bolus.add(bolusCarbsT);
     bolus.add(bolusN);
     bolusN.addActionListener(this);
@@ -241,7 +245,7 @@ public class PumpSwing extends JFrame implements ActionListener {
         if (e.getSource().equals(frontReturning)){
         	pumpMode.setreturningName("Patient");
         	pumpMode.setInsulinCarb(9.00);
-        	pumpMode.setInsulinCarb(30.00);
+        	pumpMode.setInsulinSen(30.00);
             
             frontPage.setVisible(false);
             returningUser.setVisible(true);
@@ -315,7 +319,7 @@ public class PumpSwing extends JFrame implements ActionListener {
             carbohydratesAccuracy = carbohydrates / pumpMode.getInsulinCarb();
             bloodGlucoseAccuracy = (bloodGlucose - aim) / pumpMode.getInsulinSen();
             totalBolus = Math.floor((carbohydratesAccuracy + bloodGlucoseAccuracy) * 100) / 100 ;
-            bolusTot.setText("Bolus Suggestion: " + totalBolus + "U");
+            bolusTot.setText("Bolus Suggestion: " + totalBolus + " Units of insulin");
             
             if (bloodGlucose >= 250){
             	bolusWarn.setVisible(true);
@@ -328,7 +332,7 @@ public class PumpSwing extends JFrame implements ActionListener {
             if (bloodGlucose > 80 && bloodGlucose < 250){
                 bolusWarn.setVisible(false);
             }
-            confirmAreYouSure.setText(totalBolus + "U. Deliver?");
+            confirmAreYouSure.setText(totalBolus + " Units of insulin. Deliver?");
            
             
         }
